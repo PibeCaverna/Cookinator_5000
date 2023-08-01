@@ -26,5 +26,7 @@ class Ingredient():
         while tag in self._Tags:
             if self.Tags()[c] == tag: self._Tags.pop(c)
             else: c+=1
+    def id (self):
+        return self._ID
 
 

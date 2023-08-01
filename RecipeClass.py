@@ -15,3 +15,5 @@ class Recipe():
         return d
     def steps (self):
         return self._recipe
+    def Tags (self):
+        return self._Tags
