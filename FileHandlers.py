@@ -1,8 +1,8 @@
-#--------------------------------------------------Dependencies--------------------------------------------------#
+#--------------------------------------Dependencies--------------------------------------#
 from IngredientClass import Ingredient
 from RecipeClass import Recipe
 import Fonctonarium as Fm
-#================================================================================================================#
+#========================================================================================#
 def loadinv (inventory,path):
     '''this function loads the inventory from ~/path/Inventory.txt into a dictionary with the form ID,Quantity'''
     path += "Inventory.txt"
@@ -20,7 +20,7 @@ def saveinv (inventory,path):
         Archie.writeline(k+";"+str(v))
     Archie.close()
     return inventory
-#----------------------------------------------------------------------------------------------------------------#
+#----------------------------------------------------------------------------------------#
 def loadref (reference,inventory,path):
     '''loads references into a set ready to use'''
     path += "IngredientReferences.txt"
@@ -46,7 +46,7 @@ def saveref (reference,path):
         if not esta: Archie.writeline(str(cosa)+";"+cosa.Units()+str(cosa.Dcook())+";"+str(cosa.Ising())+";"+str(cosa.Tags())[1:-1])
         Archie.seek(0,0)
     return reference
-#----------------------------------------------------------------------------------------------------------------#
+#----------------------------------------------------------------------------------------#
 def loadrcp (recipes,inventory,path):
     '''Loads recipes in a list ready to use'''
     path += "Recipes.txt"
