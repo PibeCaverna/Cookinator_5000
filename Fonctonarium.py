@@ -1,13 +1,14 @@
 #-----------------------------------Dependencies--------------------------------------#
 from IngredientClass import Ingredient
 from RecipeClass import Recipe
+import FileHandlers as fh
 import random as rd
 #-----------------------------------Fonctonarium--------------------------------------#
 def strtobool (cosa):
     '''takes a string as an input and returns it as a bool'''
     if cosa == "True" or "true": Cosa = True
     elif cosa == "False" or "false": Cosa = False
-    else cosa = "Error: string does't relate to a bool"
+    else: cosa = "Error: string does't relate to a bool"
     return cosa
 def rmvunvrcp (inventory,recipes):
     '''removes all recipes that cannot be done with the ingredients available'''
@@ -27,7 +28,7 @@ def addref (reference,ID,units,Dcook,Ising,Tags = []):
     reference.add(reftadd)
     return reference
 def changeinv(inventory,changes):
-    '''changes the inventory by adding, removing or modifiying the key value pairs from the changes dictionary''''
+    '''changes the inventory by adding, removing or modifiying the key value pairs from the changes dictionary'''
     for k,v in changes.items():
         if k in inventory.values(): inventory[k] += v
         else: inventory[k] = v
@@ -42,6 +43,12 @@ def randrcp(recipes,inventory,eaters):
         if can: chosen = True
     changeinv(Inventory,rcp.reqingredients(-eaters))
     return rcp
+def makecfg(cfg,lang,path):
+    cfg["Language"] = lang
+    cfg["Path"] = path
+    fh.savecfg(cfg)
+    return cfg
+
 
 
 
