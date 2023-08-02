@@ -1,0 +1,6 @@
+Cargando Inventario
+Directorio incorrecto, por favor cree los directorios pertinentes y vuenva a intentar
+Su directorio actual es: 
+Por favor ingrese su nuevo directorio para guardar sus archivos: 
+Cargando Referencias
+Cargando Recetas
