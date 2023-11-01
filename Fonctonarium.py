@@ -6,8 +6,8 @@ import random as rd
 #-----------------------------------Fonctonarium--------------------------------------#
 def strtobool (cosa):
     '''takes a string as an input and returns it as a bool'''
-    if cosa == "True" or "true": Cosa = True
-    elif cosa == "False" or "false": Cosa = False
+    if cosa == "True" or "true": cosa = True
+    elif cosa == "False" or "false": cosa = False
     else: cosa = "Error: string does't relate to a bool"
     return cosa
 def rmvunvrcp (inventory,recipes):

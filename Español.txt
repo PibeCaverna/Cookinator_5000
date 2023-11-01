@@ -4,3 +4,75 @@ Su directorio actual es:
 Por favor ingrese su nuevo directorio para guardar sus archivos: 
 Cargando Referencias
 Cargando Recetas
+---------------------------------------------------------------------------------------
+			  Bienvenido al Cookinator 5000
+			  	   versión 0.1
+				     español
+                .-----.                                _.----"""""""----._
+          _.---//-"""-\\---._            .------.___  (                   )
+         (   (/        `-'   )          (        ___|-|`"""---..___..---""|
+        _|`"--._________.--"'|_          `---'"""     |                   |
+       (_|                   |_)                      |                   |
+       `--)                 (--'          ________    |                   |
+         |                   |   _.--"""""        """"----._              |
+         |                   |  (_                         _)--.----------------.
+         |                   |   \`""---...________...----'/__/___             ||
+         `-.__           __.-'    \___                  __/ ""-----"""""""-----`'
+     VK       `""-----""'              ""`-----------'""
+	       
+	       Ingrese "Recetas" Para acceder al gestor de recetas
+	     Ingrese "Inventario" Para acceder al gestor de inventario
+	   Ingrese "Planificador" Para acceder al planificador de comidas
+	   		   Ingrese "Salir" para salir
+Recetas
+Inventario
+Planificador
+Salir
+Ingrese "Volver" Para volver al Menu anterior
+Volver
+				    Recetario
+      			     _ _
+ 			.-. | | |
+ 			| |_| | |
+ 			| | | | |<\
+ 			| | | | | \\
+ 			| | | | |  \\      "Bookshelf" by
+ 			| | | | |   \>     David S. Issel
+			""""""""""""""""""
+		Ingrese "Recetas" Para ver las recetas disponibles
+		      Ingrese "Nuevo" Para agregar una receta
+		    Ingrese "Menu" Para volver al Menu inicial
+Recetas
+Nuevo
+Menu
+ingrese una receta para verla en detalle
+Ingrese el nombre del ingrediente que desea agregar: 
+Ingrese la cantidad de ese ingrediente que corresponda a una porción: 
+¿desea agregar otro ingrediente a la receta?
+Si si sI SI
+No no nO NO
+ingrese el nombre de la receta a agregar: 
+si desea agregue tags que desee asociar con su receta, para finalizar escriba "Volver":
+si desea agregar un procedimiento, ingreselo a continuación: 
+				  Inventario
+   		         ,..........   ..........,
+		     ,..,'          '.'          ',..,
+		    ,' ,'            :            ', ',
+		   ,' ,'             :             ', ',
+		  ,' ,'              :              ', ',       
+		 ,' ,'............., : ,.............', ',
+		,'  '............   '.'   ............'  ',
+		 '''''''''''''''''';''';''''''''''''''''''
+		                    '''
+	   Ingrese "Inventario" para ver los alimentos disponibles
+	  Ingrese "Nuevo" para agregar un ingrediente al inventario
+	   Ingrese "Agregar" para agregar unidades de un igrediente
+	    Ingrese "Quitar" para quitar unidades de un ingrediente
+Agregar
+Quitar
+Su ingrediente no cuenta con una referencia, ¿desea agregarla?: 
+Ingrese el nombre de su ingrediente: 
+Ingrese el tipo de unidad de su ingrediente: 
+¿Puede su Ingrediente cocinarse como un plato?: 
+¿Es su ingrediente usado en preparaciones?: 
+si desea agregue tags que desee asociar con su Ingrdiente, para finalizar escriba "Volver": 
