@@ -75,10 +75,10 @@ while Loop:
     select = input()
     #note that the slicing is used to avoid the "\n"
     #the strings asociated with the diferent menus go from lines 28 to 31 in the language files, and correspond to the ones explained in lines 23 to 26 respectively
-    if select == lang[26].strip(): RCPM = True
-    elif select == lang[27].strip(): INVM = True
-    elif select == lang[28].strip(): Plan = True
-    elif select == lang[29].strip(): Loop = False
+    if select == lang[26].strip(): RCPM = True      #RCPM == Recipe Manager
+    elif select == lang[27].strip(): INVM = True    #INVM == Inventory Manager
+    elif select == lang[28].strip(): Plan = True    #Plan == Meal Planner
+    elif select == lang[29].strip(): Loop = False   #Closing Prompt
     
     #Recipe Manager
     #Strings 32 to 56
@@ -86,9 +86,11 @@ while Loop:
     while RCPM:
         VRCP = False
         select = input()
+        #recipe viewer
         if select == lang[44].strip():
             VRCP = True
-            print(["Esto", "es", "un", "placeholder"])#print(showrecipes(rcps)) falta armar la función 
+            print(fm.showrecipes(rcps))
+        #recipe adder
         elif select == lang[45].strip():
             rcpname = input(lang[53].strip())
             ingadder = True
@@ -110,17 +112,27 @@ while Loop:
         elif select == lang[46].strip(): RCPM = False
         elif select == lang[31].strip(): RCPM = False
         if VRCP:
-            print(lang[48])
+            print(lang[47])
             print(lang[30][:-1])
         while VRCP:
             select = input()
-            if select in [str(rcps[I]) for I in range(len(rcps))]:
-                print("Esto es un placeholder, falta la función")
-                #print(fm.detailrcp([[str(I) for I in range(len(rcps))].index(select)]))
-            elif select == lang[31].strip(): VRCP = False
+            found = False
+            i = 0
+            if select == lang[31].strip(): VRCP = False
             elif select == lang[46].strip():
                 VRCP = False
                 RCPM = False
+            #doesn't work, check later
+            else:
+                while not found:
+                    if str(rcps[i]) == select:
+                        found = True
+                        print (lang[78])
+                        for k,v in rcps[i].reqingredients(1):
+                            print(str(k),"  ",str(v))
+                        print (rcps[i].steps())
+                    else: i+=1
+    
     #Inventory manager
     #strings 57 to 78
     if INVM: print(lang[6],lang[56],lang[57],lang[58],lang[59],lang[60],lang[61],lang[62],lang[63],lang[64],lang[65],lang[66],lang[67],lang[68],lang[69],lang[6].strip())

@@ -46,12 +46,12 @@ Recetas
 Nuevo
 Menu
 ingrese una receta para verla en detalle
-Ingrese el nombre del ingrediente que desea agregar: 
-Ingrese la cantidad de ese ingrediente que corresponda a una porción: 
+Ingrese el nombre del ingrediente que desea agregar:  
+Ingrese la cantidad de ese ingrediente que corresponda a una porción:   
 ¿desea agregar otro ingrediente a la receta?
 Si si sI SI
 No no nO NO
-ingrese el nombre de la receta a agregar: 
+ingrese el nombre de la receta a agregar:   
 si desea agregue tags que desee asociar con su receta, para finalizar escriba "Volver":
 si desea agregar un procedimiento, ingreselo a continuación: 
 				  Inventario
@@ -75,4 +75,5 @@ Ingrese el nombre de su ingrediente:
 Ingrese el tipo de unidad de su ingrediente: 
 ¿Puede su Ingrediente cocinarse como un plato?: 
 ¿Es su ingrediente usado en preparaciones?: 
-si desea agregue tags que desee asociar con su Ingrdiente, para finalizar escriba "Volver": 
+si desea agregue tags que desee asociar con su Ingrediente, para finalizar escriba "Volver": 
+Ingredientes (por porción): 

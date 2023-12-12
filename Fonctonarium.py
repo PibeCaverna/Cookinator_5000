@@ -48,7 +48,11 @@ def makecfg(cfg,lang,path):
     cfg["Path"] = path
     fh.savecfg(cfg)
     return cfg
-
+def showrecipes(rcps):
+    '''Prints all available recipes in a list '''
+    for i in rcps:
+        print(i)
+    return
 
 
 
