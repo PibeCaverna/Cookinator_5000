@@ -138,9 +138,46 @@ while Loop:
     if INVM: print(lang[6],lang[56],lang[57],lang[58],lang[59],lang[60],lang[61],lang[62],lang[63],lang[64],lang[65],lang[66],lang[67],lang[68],lang[69],lang[6].strip())
     while INVM:
         select = input()
-        if select == lang[46].strip() or select == lang[31].strip(): INVM = False
-    
-
+        #ingredient adder, gotta make a check for reference object. ngl it ain't something
+        #useful for 0.1 (ignore strings on lines 75 to 78 of the language file)
+        if select == lang[70]:
+            print(lang[79] + lang[80])
+            ccorte = False
+            temporarydict = {"":""}
+            #takes user input as designed in line 80 of the lang file and exits the loop
+            #if nothing is changed. should add an exeption if the split doesn't work (or do something else)
+            while not ccorte:
+                cosa = input(">")
+                k, v = ccorte.split(" ",1)
+                v = int(v)
+                temporarydict.update({k:v})
+                ccorte = not(cosa)
+            temporarydict.pop("")
+            fm.changeinv(inv, temporarydict)
+            temporarydict.clear()
+        #ingredient remover
+        elif select == lang [72]:
+            #removes recipes, same algorithm as for adding, shoud add a check for negative values
+            print(lang[82],lang[81]) 
+            while not ccorte:
+                cosa = input(">")
+                k, v = ccorte.split(" ",1)
+                v = -int(v)
+                temporarydict.update({k:v})
+                ccorte = not(cosa)
+            temporarydict.pop("")
+            fm.changeinv(inv, temporarydict)
+            temporarydict.clear()
+        #Ingredient displaying
+        elif select == lang[27]:
+            for k,v in inv.items():
+                print(k+_______+str(v))
+        #exit menu
+        elif select == lang[46].strip() or select == lang[31].strip(): INVM = False
+#saves recipes and inventory, then exits program
+fh.savercp(rcps,conf["Path"])
+fh.saveinv(inv ,conf["Path"])
+exit()
 
 
     

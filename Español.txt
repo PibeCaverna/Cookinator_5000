@@ -55,7 +55,7 @@ ingrese el nombre de la receta a agregar:
 si desea agregue tags que desee asociar con su receta, para finalizar escriba "Volver":
 si desea agregar un procedimiento, ingreselo a continuación: 
 				  Inventario
-   		         ,..........   ..........,
+   		       ,..........   ..........,
 		     ,..,'          '.'          ',..,
 		    ,' ,'            :            ', ',
 		   ,' ,'             :             ', ',
@@ -76,4 +76,9 @@ Ingrese el tipo de unidad de su ingrediente:
 ¿Puede su Ingrediente cocinarse como un plato?: 
 ¿Es su ingrediente usado en preparaciones?: 
 si desea agregue tags que desee asociar con su Ingrediente, para finalizar escriba "Volver": 
-Ingredientes (por porción): 
+Ingredientes (por porción):
+Ingrese el Nombre del ingrediente que desea agregar y con un espacio la cantidad a agregar
+Cuando finalice presione enter
+Elemento agregado satisfactoriamente
+Ingrese el Nombre del ingrediente que desea quitar y con un espacio la cantidad a remover
+
