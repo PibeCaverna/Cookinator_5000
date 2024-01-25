@@ -81,4 +81,4 @@ Ingrese el Nombre del ingrediente que desea agregar y con un espacio la cantidad
 Cuando finalice presione enter
 Elemento agregado satisfactoriamente
 Ingrese el Nombre del ingrediente que desea quitar y con un espacio la cantidad a remover
-
+Ingrese la cantidad de comensales que va a servir:
