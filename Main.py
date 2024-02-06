@@ -184,7 +184,7 @@ while Loop:
         elif select == lang[46].strip() or select == lang[31].strip(): INVM = False
     if Plan:
         #Meal planner, at the moment just throws a random recipe
-        ppl = input(lang[83],">")
+        ppl = input(lang[83])
         print (fm.randrcp(rcps,inv,int(ppl)))
 #saves recipes and inventory, then exits program
 fh.savercp(rcps,conf["Path"])
