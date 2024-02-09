@@ -38,11 +38,11 @@ def loadref (reference,inventory,path):
 def saveref (reference,path):
     '''saves references into a file'''
     path += "IngredientReferences.txt"
-    Archie = open(path,mode = "w",encoding = "utf-8")
+    Archie = open(path,mode = "r+",encoding = "utf-8")
     esta = False
     for cosa in reference:
-        while not esta:
-            if Archie.readline().split(";")[0] == str(cosa): esta = True   
+        for Linea in Archie:
+            if Linea.split(";")[0] == str(cosa): esta = True   
         if not esta: Archie.write(str(cosa)+";"+cosa.Units()+str(cosa.Dcook())+";"+str(cosa.Ising())+";"+str(cosa.Tags())[1:-1])
         Archie.seek(0,0)
     return reference
@@ -65,12 +65,12 @@ def loadrcp (recipes,inventory,path):
 def savercp (recipes,path):
     '''saves recipes into a file'''
     path += "Recipes.txt"
-    Archie = open(path,mode = "w",encoding = "utf-8")
+    Archie = open(path,mode = "r+",encoding = "utf-8")
     esta = False
     for cosa in recipes:
-        while not esta:
-            if Archie.readline().split(";")[0] == str(cosa):esta = True
-        if not esta: Archie.write(str(cosa)+";"+str(cosa.reqingredients(1))[1:-1]+";"+str(cosa.Tags())[1:-1],cosa.steps())
+        for Linea in Archie:
+            if Linea.split(";")[0] == str(cosa):esta = True 
+        if not esta: Archie.write(str(cosa)+";"+str(cosa.reqingredients(1))[1:-1]+";"+str(cosa.Tags())[1:-1]+";"+cosa.steps())
 #-------------------------------------------------------------------------------------#
 def loadcfg (conf):
     Archie = open("Config.txt",mode = "r",encoding = "utf-8")
