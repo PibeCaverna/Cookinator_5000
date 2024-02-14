@@ -38,7 +38,9 @@ while setup:
     try: fh.loadinv(inv,conf["Path"])
     except FileNotFoundError:
         setup = True
-        try: fh.saveinv({},conf["Path"])
+        try: 
+            tmp = open(conf["Path"]+"Inventory.txt","x")
+            tmp.close()
         except FileNotFoundError:
             print(lang[1]+lang[2][:-1]+conf["Path"])
             conf["Path"] = input(lang[3])
@@ -49,8 +51,8 @@ while setup:
     ref = set()
     try: fh.loadref(ref,inv,conf["Path"])
     except FileNotFoundError: 
-        setup = True
-        fh.saveref(ref,conf["Path"])
+        tmp = open(conf["Path"]+"IngredientReferences.txt","x")
+        tmp.close()
     else: setup = False
     #recipe loader
     print(lang[5])
@@ -58,7 +60,8 @@ while setup:
     try: fh.loadrcp (rcps,inv,conf["Path"])
     except FileNotFoundError:
         setup = True
-        fh.savercp(rcps,conf["Path"])
+        tmp = open(conf["Path"]+"Recipes.txt","x")
+        tmp.close()
     else:setup = False
 #---------------------------------------------------------------------------------------#
 #-----------------------------------------Loop------------------------------------------#
