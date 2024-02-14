@@ -14,10 +14,10 @@ def rmvunvrcp (inventory,recipes):
     '''removes all recipes that cannot be done with the ingredients available'''
     for r in recipes:
         av = False
-        for k,v in recipes.reqingrediens(1).items():
+        for k,v in r.reqingredients(1).items():
             for q,u in inventory.items():
                 if q == k and u > v: av = True
-            if not av: recipes.popitems(k,v)
+            if not av: recipes.remove(r)
     return recipes
 def addrcp (recipes,ID,Ing,tags = [],recipe = ""):
     rcptadd = Recipe (ID,Ing,tags,recipe)
