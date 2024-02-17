@@ -70,7 +70,7 @@ def savercp (recipes,path):
     for cosa in recipes:
         for Linea in Archie:
             if Linea.split(";")[0] == str(cosa):esta = True 
-        if not esta: Archie.write(str(cosa)+";"+str(cosa.reqingredients(1))[1:-1]+";"+str(cosa.Tags())[1:-1]+";"+cosa.steps())
+        if not esta: Archie.write(str(cosa)+";"+str(cosa.reqingredients(1))[1:-1]+";"+str(cosa.Tags())[1:-1]+";"+cosa.steps()+"\n")
 #-------------------------------------------------------------------------------------#
 def loadcfg (conf):
     Archie = open("Config.txt",mode = "r",encoding = "utf-8")
