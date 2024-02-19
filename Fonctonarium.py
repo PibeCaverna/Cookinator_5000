@@ -10,7 +10,7 @@ def strtobool (cosa):
     elif cosa == "False" or "false": cosa = False
     else: cosa = "Error: string does't relate to a bool"
     return cosa
-def rmvunvrcp (inventory,recipes):
+def rmvunvrcp (inventory,recipes): #this one has gon FUBAR and I can't find out why
     '''removes all recipes that cannot be done with the ingredients available'''
     for r in recipes:
         av = False

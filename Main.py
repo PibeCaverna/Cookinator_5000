@@ -125,15 +125,15 @@ while Loop:
             elif select == lang[46].strip():
                 VRCP = False
                 RCPM = False
-            #doesn't work, check later
             else:
                 while not found:
-                    if str(rcps[i]) == select:
+                    if ((i<len(rcps)) and (str(rcps[i]) == select)):
                         found = True
                         print (lang[78])
-                        for k,v in rcps[i].reqingredients(1):
+                        for k,v in rcps[i].reqingredients(1).items():
                             print(str(k),"  ",str(v))
                         print (rcps[i].steps())
+                        VRCP = False
                     else: i+=1
     
     #Inventory manager
