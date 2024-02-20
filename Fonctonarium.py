@@ -38,7 +38,7 @@ def randrcp(recipes,inventory,eaters):
     while not chosen:
         rcp = recipes[rd.randint(0,len(recipes)-1)]
         can = True
-        for k,v in rcp.reqingredients(eaters):
+        for k,v in rcp.reqingredients(eaters).items():
             if not(k in inventory.keys()) or not(inventory[k]< v): can = False
         if can: chosen = True
     changeinv(Inventory,rcp.reqingredients(-eaters))
