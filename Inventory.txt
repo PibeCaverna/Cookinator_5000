@@ -1,1 +1,4 @@
 Papa;10
+Huevo;24
+Milanesas;10
+Cebolla;10
