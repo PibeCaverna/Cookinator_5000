@@ -34,14 +34,16 @@ def changeinv(inventory,changes):
         else: inventory[k] = v
         if inventory[k] <= 0: inventory.pop(k)
 def randrcp(recipes,inventory,eaters):
-    chosen = False
-    while not chosen:
-        rcp = recipes[rd.randint(0,len(recipes)-1)]
-        can = True
-        for k,v in rcp.reqingredients(eaters).items():
-            if not(k in inventory.keys()) or not(inventory[k]< v): can = False
-        if can: chosen = True
-    changeinv(Inventory,rcp.reqingredients(-eaters))
+    rcp = recipes[rd.randint(0,len(recipes)-1)]
+#Goes FUBAR on checking, there is something wrong with the string comparison. may work if the limit is given by changeinv
+#    chosen = False
+#    while not chosen:
+#        rcp = recipes[rd.randint(0,len(recipes)-1)]
+#        can = True
+#        for k,v in rcp.reqingredients(eaters).items():
+#            if not(k in inventory.keys()) or not(inventory[k]< v): can = False
+#        if can: chosen = True
+    changeinv(inventory,rcp.reqingredients(-eaters))
     return rcp
 def makecfg(cfg,lang,path):
     cfg["Language"] = lang
