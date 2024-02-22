@@ -56,7 +56,7 @@ def loadrcp (recipes,inventory,path):
         tent[2] = tent[2].split(",")
         tent[1] = tent[1].split(",")
         tent [1] = [tent[1][n].split(":") for n in range(len(tent[1]))]
-        props  = {tent[1][n][0] : int(tent[1][n][1]) for n in range(len(tent[1]))}
+        props  = {tent[1][n][0][1:-1] : int(tent[1][n][1]) for n in range(len(tent[1]))}
         recipes.append(Recipe(tent[0],props,tent[2],tent[3]))
         #Fm.rmvunvrcp(inventory,recipes)
         #"removes recipes that cannot be done whith items in inventory" doesn't work :(

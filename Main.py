@@ -189,6 +189,7 @@ while Loop:
         #Meal planner, at the moment just throws a random recipe
         ppl = input(lang[83])
         print (fm.randrcp(rcps,inv,int(ppl)))
+        input("<-")
 #saves recipes and inventory, then exits program
 fh.savercp(rcps,conf["Path"])
 fh.saveinv(inv ,conf["Path"])
