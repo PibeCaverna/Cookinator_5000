@@ -1,1 +1,3 @@
 Pure de papa;'Papa': 2;'papa', 'pure';procedimiento
+Tortilla de papa;'Papa': 2,'Huevo': 1,'Cebolla': 1;'papa','tortilla'; Hacer tortilla de papa
+Milanesas con pure;'Milanesa': 2,'Papa':2;;La mila a la plancha y la papa a puré
